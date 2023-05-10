@@ -1,0 +1,136 @@
+html.body {
+    padding: 0;
+    margin: 0;
+    text-align: auto;
+}
+body{
+    background-color: #E1D0C4;
+}
+img {
+    display: block;
+    margin: auto;
+}
+nav > li {
+    padding-left: 15px;
+}
+nav a {
+    text-decoration: none;
+    color:black
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav#primeira_linha{ 
+    width: auto;
+    height: auto;
+    list-style: none;
+    display: flex;
+    background-color: #639094;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1160px;
+
+}
+
+.footer {
+    padding: 25px 0;
+}
+
+.theme {
+    float: left;
+}
+
+.author {
+    float: right;
+}
+
+div#caixinha_prima{
+    text-align: auto;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: #FFFBF7;
+    padding: 5px;
+
+}
+header div#idiotas_aps{
+    margin-top: 15px;
+}
+nav ul button#butao_primo{
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    right: 10px; 
+    margin-right: 45px;
+
+}
+nav#col01{
+    background-color: #C3DEE0;
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+div#tit01{
+    text-align: center;
+    margin-right: 700px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+div#txt01{
+    margin-left: 10px;
+    border: 1px solid;
+    width: 50%;
+    height: auto;
+    list-style: none;
+    display: flex;
+    line-break: auto;
+}
+nav#col02{
+    background-color: #948072;
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+nav ul div#tit02{
+    display: inline;
+    margin-right: 50px;
+    padding: 5px; 
+    text-align: center;
+}
+ul#left_sice{
+    text-align: end;
+}
+/*
+
+
+/*Box do header */
+ul #header_dropdown_01 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 150px;}
+ul  li {
+    list-style: none;
+    position: relative;
+    display: block;}
+/*Remome itens selecionados*/
+ul li ul{
+    list-style: none;
+    position: absolute;
+    left: 110.5px;
+    top: 0px;
+    text-align: auto;
+    border: 1px solid black;
+    background-color: #FFFBF7;
+    padding: 5px;
+    display: none;
+}
+    
+/*Quadrado e cor */
+ul li a {
+    display: block;
+    text-decoration: none;}
+li:hover ul  { display: block; }
+ul#dropdown_header_01 li a:hover{
+    text-decoration:underline;
+    font-weight: bold;
+    display: block;}
