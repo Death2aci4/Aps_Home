@@ -70,10 +70,12 @@ nav#col01{
     width: 100%;
     display: flex;
     margin-top: -5px;
+    margin-top: 0.3px;
+
 }
 div#borda{
-    padding-left: 5px;
-    padding-right: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 div#tit01{
     text-align: center;
@@ -115,7 +117,12 @@ img#novo_caminhao{
     width: 100%;
 }
 /*
-
+/*tetse de p*/
+div#linha01{
+    margin-top: -15px;
+    margin-bottom: -15px;
+    text-align: center;
+}
 
 /*Box do header */
 ul #header_dropdown_01 {
