@@ -1,19 +1,34 @@
+<?php 
+  session_start();
+  include_once "php/config.php";
+  if(!isset($_SESSION['unique_id'])){
+    header("location: index.php");
+  }
+?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C&C</title>
-    <link rel="stylesheet" href="D:\03- Enzo\Estudos\css\styles_APS_5S.css">
-    <link rel="stylesheet" href="D:\03- Enzo\Estudos\JavaScript\Testejava.js">
+    <link rel="stylesheet" href="styles_APS_5S.css">
 </head>
+
 <body>
     <header><nav id="primeira_linha">
+        <?php 
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+            if(mysqli_num_rows($sql) > 0){
+              $row = mysqli_fetch_assoc($sql);
+            }
+          ?>
         <ul><div id="caixinha_prima">Caminhões e caminhonetas</div></ul>
-        <ul><img src="D:\03- Enzo\Extra\Imagens\Batma_sem_fundo_01.png" alt="cadastro"></ul>
+        <ul><img id="perfil" src="php/images/<?php echo $row['img']; ?>" alt=""></ul>
         <div id="idiotas_aps">
-            <div><a href="">Meu perfil</a></div><div>Configurações</div><div>Ajuuda</div>
+            <div><a href="">Meu perfil</a></div>
+            <div>Configurações</div>
+            <div>Ajuda</div>
         </div>
         <ul id="header_dropdown_01">
             <li id="dropdown_header"><a href="#">Qual sua duvida?</a>
@@ -27,28 +42,54 @@
           </ul>
         <ul><p></p></ul>
         <ul><p></p></ul>
-        <ul id="left_sice"><a href="#">Chat</a></ul>
-        <ul><button id="butao_primo">Sair</button></ul>
+        <ul><a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" id="butao_primo">Desconectar</a></ul>
     </nav></header>
-    <p></p>
-    <nav id="col01">
-        <ul>
-            <div id="tit01">Quem somos nos?</div>
-            <div id="txt01">Nos somos uma das miaores empresas de        trasnporte e manutenção,
-            Garantimos que o seu produto chegará ou seu destino final no periodo de tempo demandado,
-            Nossa empresa é focada no bem estra dos funcionarios e de seus clientes, sempres visando pelo conofrto e pelo cuidado a todos os integrantes e a todos os invulvidos.
-            </div>
-        </ul>
-        <ul><img src="" alt="Caminhão01"></ul>
-    </nav>
+    <div id="borda">
+        <nav id="col01">
+            <ul id="left_sice"><a href="users.php">Chat</a></ul>
+            <ul><a href="gallery.php">Galeria</a></ul>
+            <ul><a href="#">Calendario</a></ul>
+            <ul><a href="#">Estoque</a></ul>
+            <ul><a href="#">Reuniões</a></ul>
+        </nav>
+    </div>
     <p></p>
     <nav id="col02">
-        <ul><img src="" alt="Caminhão01"></ul>
+        <ul><img src="Filial.jpg" alt="Caminhão01"></ul>
         <ul>
-            <div id="tit02">Nosso ponto forte</div>
-            <div id="txt02">
-            </div>
+            <div id="tit02">Hoje a nossa companhia completa 15 anos desde a sua criação, e é com muito prazer que 
+            anunciamos a abertura de uma nova filial na cidade de Cosmópolis - SP, muito obrigado pelo
+            esforço e que possamos crescer ainda mais.</div>
+            <div id="txt02">Postado por: Ademir</div>
+            <br>
+            <div>Comentarios:</div>
+            <br>
+            <div>Que Legal!</div>
+            <div>Postado por: Anderson</div>
+            <br>
+            <div>Estou muito feliz com esse marco na empresa, não vejo a hora de estarmos ainda maiores</div>
+            <div>Postado por: Carlos</div>
         </ul>
+    </nav>
+    <br>
+    <nav id="col03">
+
+      <ul>
+        <div id="tit03">Através dessa noticia, venho comunicar que a empresa está discutindo a possibilidade da fabricação
+          de um novo modelo de caminhão que conta com tecnologias de Inteligencia Artificial e monitoramento de carga. O esperado é
+          que as fabricações comecem até o proximo semestre, mais informações em breve.
+        </div>
+        <div id="txt03">Postado por: Marcos</div>
+        <br>
+        <div>Comentarios:</div>
+        <br>
+        <div>Espero que não de mais trabalho que os caminhões que ja fazemos</div>
+        <div>Postado por: Carlos</div>
+        <br>
+        <div>Estou ansioso para ver essa nova tecnologia de monitoramento</div>
+        <div>Postado por: Anderson</div>
+      </ul>
+      <ul><img id="novo_caminhao"src="novo_caminhao.png" alt="#"></ul>
     </nav>
 </body>
 </html>
