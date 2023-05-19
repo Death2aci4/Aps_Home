@@ -28,11 +28,7 @@ nav#primeira_linha{
     background-color: #639094;
 }
 
-.wrapper {
-    margin: 0 auto;
-    max-width: 1160px;
 
-}
 
 .footer {
     padding: 25px 0;
@@ -53,10 +49,14 @@ div#caixinha_prima{
     padding: 5px;
 
 }
+img#perfil{
+    height: 50px;
+    width: 50px;
+}
 header div#idiotas_aps{
     margin-top: 15px;
 }
-nav ul button#butao_primo{
+nav ul a#butao_primo{
     position: absolute;
     width: 40px;
     height: 25px;
@@ -69,6 +69,11 @@ nav#col01{
     height: auto;
     width: 100%;
     display: flex;
+    margin-top: -5px;
+}
+div#borda{
+    padding-left: 5px;
+    padding-right: 10px;
 }
 div#tit01{
     text-align: center;
@@ -98,6 +103,16 @@ nav ul div#tit02{
 }
 ul#left_sice{
     text-align: end;
+}
+
+nav#col03{
+    background-color: #948072;
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+img#novo_caminhao{
+    width: 100%;
 }
 /*
 
@@ -134,3 +149,11 @@ ul#dropdown_header_01 li a:hover{
     text-decoration:underline;
     font-weight: bold;
     display: block;}
+
+/*galeria*/
+
+.photos img{
+    max-width: 1048px;
+    max-height: 1048px;
+}
+
